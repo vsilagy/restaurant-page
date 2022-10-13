@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack serve"
+    "dev": "webpack serve",
+    "deploy": "gh-pages --dist 'dist' --branch 'development'"
   },
   "repository": {
     "type": "git",
@@ -16,12 +17,13 @@
   "bugs": {
     "url": "https://github.com/vsilagy/restaurant-page/issues"
   },
-  "homepage": "https://github.com/vsilagy/restaurant-page#readme",
+  "homepage": "https://vsilagy.github.io/restaurant-page",
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@babel/preset-env": "^7.19.4",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
+    "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.74.0",
