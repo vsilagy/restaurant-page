@@ -1,1 +1,95 @@
-
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 400;
+}
+body {
+  color: antiquewhite;
+  min-height: 100vh;
+  background-image: url(../src/assets/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: 75% 0;
+  background-size: cover;
+}
+.container {
+  max-width: 1200px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+.logo {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  padding: 0.75rem;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.btn,
+.cta-btn {
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: transparent;
+  color: antiquewhite;
+}
+.cta-btn {
+  padding: 1.25rem 2rem;
+  font-weight: 500;
+  border: 1px solid navajowhite;
+  color: navajowhite;
+}
+.btn:hover,
+.cta-btn:hover {
+  background-color: antiquewhite;
+  color: black;
+}
+.link.active {
+  background-color: salmon;
+  color: black;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 3rem;
+  max-width: 500px;
+  gap: 2.5rem;
+  padding: 1rem;
+}
+.hero h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.hero p {
+  font-size: 1.25rem;
+  font-style: italic;
+}
+.chef {
+  max-width: 25rem;
+  border-radius: 12px;
+}
+.map {
+  border-radius: 50%;
+  max-width: 20rem;
+}
+.footer {
+  margin-top: auto;
+  padding: 1rem;
+  text-align: center;
+}
