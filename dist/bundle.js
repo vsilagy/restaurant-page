@@ -33,28 +33,6 @@ function Contact() {
 
 /***/ }),
 
-/***/ "./src/components/Footer.js":
-/*!**********************************!*\
-  !*** ./src/components/Footer.js ***!
-  \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Footer)
-/* harmony export */ });
-function Footer() {
-  var content = document.getElementById("content");
-  var footer = document.createElement("div");
-  footer.classList.add("footer");
-  var text = document.createElement("p");
-  text.textContent = "Made by vsilagy";
-  footer.appendChild(text);
-  content.appendChild(footer);
-}
-
-/***/ }),
-
 /***/ "./src/components/Home.js":
 /*!********************************!*\
   !*** ./src/components/Home.js ***!
@@ -69,13 +47,12 @@ function Home() {
   var content = document.getElementById("content");
   var hero = document.createElement("div");
   hero.classList.add("hero");
-  hero.classList.add("home");
   var heading = document.createElement("h2");
   heading.textContent = "Exquisite dining since 1989";
   var textOne = document.createElement("p");
   textOne.textContent = "Experience our seasonal menu in beautiful country surroundings. Eat the freshest produce from the comfort of our farmhouse.";
   var booking = document.createElement("button");
-  booking.classList.add("booking");
+  booking.classList.add("cta-btn");
   booking.textContent = "Book a Table";
   hero.appendChild(heading);
   hero.appendChild(textOne);
@@ -101,6 +78,10 @@ function Menu() {
   var content = document.getElementById("content");
   var menu = document.createElement("div");
   menu.classList.add("hero");
+  menu.classList.add("menu");
+  var menuBtn = document.createElement("button");
+  menuBtn.classList.add("cta-btn");
+  menuBtn.textContent = "View Menu";
   var heading = document.createElement("h2");
   heading.textContent = "Our Menu";
   var textOne = document.createElement("p");
@@ -112,50 +93,10 @@ function Menu() {
   chef.classList.add("chef");
   menu.appendChild(heading);
   menu.appendChild(textOne);
+  menu.appendChild(menuBtn);
   menu.appendChild(chef);
   menu.appendChild(textTwo);
   content.appendChild(menu);
-}
-
-/***/ }),
-
-/***/ "./src/components/NavBar.js":
-/*!**********************************!*\
-  !*** ./src/components/NavBar.js ***!
-  \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ NavBar)
-/* harmony export */ });
-function NavBar() {
-  var content = document.getElementById("content");
-  var nav = document.createElement("nav");
-  nav.classList.add("nav");
-  var logo = document.createElement("h1");
-  logo.textContent = "delish";
-  logo.classList.add("logo");
-  var buttons = document.createElement("div");
-  buttons.classList.add("buttons");
-  var home = document.createElement("button");
-  home.textContent = "Home";
-  home.classList.add("btn");
-  home.setAttribute("id", "home");
-  var menu = document.createElement("button");
-  menu.textContent = "Menu";
-  menu.classList.add("btn");
-  menu.setAttribute("id", "menu");
-  var contact = document.createElement("button");
-  contact.textContent = "Contact";
-  contact.classList.add("btn");
-  contact.setAttribute("id", "contact");
-  nav.appendChild(logo);
-  nav.appendChild(buttons);
-  buttons.appendChild(home);
-  buttons.appendChild(menu);
-  buttons.appendChild(contact);
-  content.appendChild(nav);
 }
 
 /***/ }),
@@ -185,7 +126,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap);"]);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: \"League Spartan\", sans-serif;\n  font-weight: 400;\n}\nbody {\n  color: antiquewhite;\n  min-height: 100vh;\n}\n.hero.home {\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-repeat: no-repeat;\n  background-position: 75% 0;\n  background-size: cover;\n}\n.container {\n  max-width: 1200px;\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n  margin: 0 auto;\n}\n.nav {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 2rem 0;\n}\n.logo {\n  font-size: 4rem;\n  font-weight: 700;\n  line-height: 1.1;\n  padding: 0.75rem;\n}\n.buttons {\n  display: flex;\n  justify-content: space-between;\n}\n.btn,\n.booking {\n  font-size: 2rem;\n  font-family: inherit;\n  padding: 0.75rem 1.25rem;\n  border: none;\n  cursor: pointer;\n  text-decoration: none;\n  background-color: transparent;\n  color: antiquewhite;\n}\n.booking {\n  padding: 1.25rem 2rem;\n  font-weight: 500;\n  border: 1px solid navajowhite;\n  color: navajowhite;\n  margin-top: 2rem;\n}\n.btn:hover,\n.booking:hover {\n  background-color: antiquewhite;\n  color: black;\n}\n.link.active {\n  background-color: salmon;\n  color: black;\n}\n.hero {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  margin-top: 4rem;\n  max-width: 500px;\n  gap: 2.5rem;\n  padding: 1rem;\n}\n.hero h2 {\n  font-size: 3rem;\n  font-weight: 600;\n}\n.hero p {\n  font-size: 1.25rem;\n  font-style: italic;\n}\n.chef {\n  max-width: 30rem;\n  border-radius: 12px;\n}\n.map {\n  border-radius: 50%;\n  max-width: 20rem;\n}\n.footer {\n  margin-top: auto;\n  padding: 1rem;\n  text-align: center;\n}\n", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AACA;EACE,sBAAsB;EACtB,SAAS;EACT,UAAU;EACV,yCAAyC;EACzC,gBAAgB;AAClB;AACA;EACE,mBAAmB;EACnB,iBAAiB;AACnB;AACA;EACE,yDAAgD;EAChD,4BAA4B;EAC5B,0BAA0B;EAC1B,sBAAsB;AACxB;AACA;EACE,iBAAiB;EACjB,iBAAiB;EACjB,aAAa;EACb,sBAAsB;EACtB,cAAc;AAChB;AACA;EACE,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;EACnB,eAAe;AACjB;AACA;EACE,eAAe;EACf,gBAAgB;EAChB,gBAAgB;EAChB,gBAAgB;AAClB;AACA;EACE,aAAa;EACb,8BAA8B;AAChC;AACA;;EAEE,eAAe;EACf,oBAAoB;EACpB,wBAAwB;EACxB,YAAY;EACZ,eAAe;EACf,qBAAqB;EACrB,6BAA6B;EAC7B,mBAAmB;AACrB;AACA;EACE,qBAAqB;EACrB,gBAAgB;EAChB,6BAA6B;EAC7B,kBAAkB;EAClB,gBAAgB;AAClB;AACA;;EAEE,8BAA8B;EAC9B,YAAY;AACd;AACA;EACE,wBAAwB;EACxB,YAAY;AACd;AACA;EACE,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,gBAAgB;EAChB,gBAAgB;EAChB,WAAW;EACX,aAAa;AACf;AACA;EACE,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,gBAAgB;EAChB,mBAAmB;AACrB;AACA;EACE,kBAAkB;EAClB,gBAAgB;AAClB;AACA;EACE,gBAAgB;EAChB,aAAa;EACb,kBAAkB;AACpB","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap\");\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: \"League Spartan\", sans-serif;\n  font-weight: 400;\n}\nbody {\n  color: antiquewhite;\n  min-height: 100vh;\n}\n.hero.home {\n  background-image: url(../src/assets/hero-bg.jpg);\n  background-repeat: no-repeat;\n  background-position: 75% 0;\n  background-size: cover;\n}\n.container {\n  max-width: 1200px;\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n  margin: 0 auto;\n}\n.nav {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 2rem 0;\n}\n.logo {\n  font-size: 4rem;\n  font-weight: 700;\n  line-height: 1.1;\n  padding: 0.75rem;\n}\n.buttons {\n  display: flex;\n  justify-content: space-between;\n}\n.btn,\n.booking {\n  font-size: 2rem;\n  font-family: inherit;\n  padding: 0.75rem 1.25rem;\n  border: none;\n  cursor: pointer;\n  text-decoration: none;\n  background-color: transparent;\n  color: antiquewhite;\n}\n.booking {\n  padding: 1.25rem 2rem;\n  font-weight: 500;\n  border: 1px solid navajowhite;\n  color: navajowhite;\n  margin-top: 2rem;\n}\n.btn:hover,\n.booking:hover {\n  background-color: antiquewhite;\n  color: black;\n}\n.link.active {\n  background-color: salmon;\n  color: black;\n}\n.hero {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  margin-top: 4rem;\n  max-width: 500px;\n  gap: 2.5rem;\n  padding: 1rem;\n}\n.hero h2 {\n  font-size: 3rem;\n  font-weight: 600;\n}\n.hero p {\n  font-size: 1.25rem;\n  font-style: italic;\n}\n.chef {\n  max-width: 30rem;\n  border-radius: 12px;\n}\n.map {\n  border-radius: 50%;\n  max-width: 20rem;\n}\n.footer {\n  margin-top: auto;\n  padding: 1rem;\n  text-align: center;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: \"League Spartan\", sans-serif;\n  font-weight: 400;\n}\nbody {\n  color: antiquewhite;\n  min-height: 100vh;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-repeat: no-repeat;\n  background-position: 75% 0;\n  background-size: cover;\n}\n.container {\n  max-width: 1200px;\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n  margin: 0 auto;\n}\n.nav {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 2rem 0;\n}\n.logo {\n  font-size: 4rem;\n  font-weight: 700;\n  line-height: 1.1;\n  padding: 0.75rem;\n}\n.tab-list {\n  display: flex;\n  justify-content: space-between;\n}\n.btn,\n.cta-btn {\n  font-size: 2rem;\n  font-family: inherit;\n  padding: 0.75rem 1.25rem;\n  border: none;\n  cursor: pointer;\n  text-decoration: none;\n  background-color: transparent;\n  color: antiquewhite;\n}\n.cta-btn {\n  padding: 1.25rem 2rem;\n  font-weight: 500;\n  border: 1px solid navajowhite;\n  color: navajowhite;\n}\n.btn:hover,\n.cta-btn:hover {\n  background-color: antiquewhite;\n  color: black;\n}\n.active {\n  background-color: navajowhite;\n  color: black;\n}\n.content {\n  width: 100%;\n}\n.hero {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  margin-top: 3rem;\n  max-width: 500px;\n  gap: 2.5rem;\n  padding: 1rem;\n}\n.hero h2 {\n  font-size: 3rem;\n  font-weight: 600;\n}\n.hero p {\n  font-size: 1.25rem;\n  font-style: italic;\n}\n.chef {\n  max-width: 25rem;\n  border-radius: 12px;\n}\n.map {\n  border-radius: 50%;\n  max-width: 20rem;\n}\n.footer {\n  margin-top: auto;\n  padding: 1rem;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 0.5rem;\n}\n.footer svg {\n  fill: antiquewhite;\n  transition: transform 0.4s ease-in-out;\n}\n.footer svg:hover {\n  transform: rotateY(0.5turn) scale(1.4);\n}\n", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AACA;EACE,sBAAsB;EACtB,SAAS;EACT,UAAU;EACV,yCAAyC;EACzC,gBAAgB;AAClB;AACA;EACE,mBAAmB;EACnB,iBAAiB;EACjB,yDAAgD;EAChD,4BAA4B;EAC5B,0BAA0B;EAC1B,sBAAsB;AACxB;AACA;EACE,iBAAiB;EACjB,iBAAiB;EACjB,aAAa;EACb,sBAAsB;EACtB,cAAc;AAChB;AACA;EACE,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;EACnB,eAAe;AACjB;AACA;EACE,eAAe;EACf,gBAAgB;EAChB,gBAAgB;EAChB,gBAAgB;AAClB;AACA;EACE,aAAa;EACb,8BAA8B;AAChC;AACA;;EAEE,eAAe;EACf,oBAAoB;EACpB,wBAAwB;EACxB,YAAY;EACZ,eAAe;EACf,qBAAqB;EACrB,6BAA6B;EAC7B,mBAAmB;AACrB;AACA;EACE,qBAAqB;EACrB,gBAAgB;EAChB,6BAA6B;EAC7B,kBAAkB;AACpB;AACA;;EAEE,8BAA8B;EAC9B,YAAY;AACd;AACA;EACE,6BAA6B;EAC7B,YAAY;AACd;AACA;EACE,WAAW;AACb;AACA;EACE,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,gBAAgB;EAChB,gBAAgB;EAChB,WAAW;EACX,aAAa;AACf;AACA;EACE,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,gBAAgB;EAChB,mBAAmB;AACrB;AACA;EACE,kBAAkB;EAClB,gBAAgB;AAClB;AACA;EACE,gBAAgB;EAChB,aAAa;EACb,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,WAAW;AACb;AACA;EACE,kBAAkB;EAClB,sCAAsC;AACxC;AACA;EACE,sCAAsC;AACxC","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap\");\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: \"League Spartan\", sans-serif;\n  font-weight: 400;\n}\nbody {\n  color: antiquewhite;\n  min-height: 100vh;\n  background-image: url(../src/assets/hero-bg.jpg);\n  background-repeat: no-repeat;\n  background-position: 75% 0;\n  background-size: cover;\n}\n.container {\n  max-width: 1200px;\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n  margin: 0 auto;\n}\n.nav {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 2rem 0;\n}\n.logo {\n  font-size: 4rem;\n  font-weight: 700;\n  line-height: 1.1;\n  padding: 0.75rem;\n}\n.tab-list {\n  display: flex;\n  justify-content: space-between;\n}\n.btn,\n.cta-btn {\n  font-size: 2rem;\n  font-family: inherit;\n  padding: 0.75rem 1.25rem;\n  border: none;\n  cursor: pointer;\n  text-decoration: none;\n  background-color: transparent;\n  color: antiquewhite;\n}\n.cta-btn {\n  padding: 1.25rem 2rem;\n  font-weight: 500;\n  border: 1px solid navajowhite;\n  color: navajowhite;\n}\n.btn:hover,\n.cta-btn:hover {\n  background-color: antiquewhite;\n  color: black;\n}\n.active {\n  background-color: navajowhite;\n  color: black;\n}\n.content {\n  width: 100%;\n}\n.hero {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  margin-top: 3rem;\n  max-width: 500px;\n  gap: 2.5rem;\n  padding: 1rem;\n}\n.hero h2 {\n  font-size: 3rem;\n  font-weight: 600;\n}\n.hero p {\n  font-size: 1.25rem;\n  font-style: italic;\n}\n.chef {\n  max-width: 25rem;\n  border-radius: 12px;\n}\n.map {\n  border-radius: 50%;\n  max-width: 20rem;\n}\n.footer {\n  margin-top: auto;\n  padding: 1rem;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 0.5rem;\n}\n.footer svg {\n  fill: antiquewhite;\n  transition: transform 0.4s ease-in-out;\n}\n.footer svg:hover {\n  transform: rotateY(0.5turn) scale(1.4);\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -904,40 +845,39 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
-/* harmony import */ var _components_NavBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/NavBar */ "./src/components/NavBar.js");
-/* harmony import */ var _components_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Home */ "./src/components/Home.js");
-/* harmony import */ var _components_Menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Menu */ "./src/components/Menu.js");
-/* harmony import */ var _components_Contact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Contact */ "./src/components/Contact.js");
-/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/Footer */ "./src/components/Footer.js");
-
-
+/* harmony import */ var _components_Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Home */ "./src/components/Home.js");
+/* harmony import */ var _components_Menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Menu */ "./src/components/Menu.js");
+/* harmony import */ var _components_Contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Contact */ "./src/components/Contact.js");
 
 
 
 
 var content = document.getElementById("content");
-content.classList.add("container");
-loadHome();
-document.body.addEventListener("click", function (e) {
-  if (e.target.id === "home") {
-    content.innerHTML = "";
-    loadHome();
-  } else if (e.target.id === "menu") {
-    content.innerHTML = "";
-    (0,_components_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"])();
-    (0,_components_Menu__WEBPACK_IMPORTED_MODULE_3__["default"])();
-    (0,_components_Footer__WEBPACK_IMPORTED_MODULE_5__["default"])();
-  } else if (e.target.id === "contact") {
-    content.innerHTML = "";
-    (0,_components_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"])();
-    (0,_components_Contact__WEBPACK_IMPORTED_MODULE_4__["default"])();
-    (0,_components_Footer__WEBPACK_IMPORTED_MODULE_5__["default"])();
-  }
+var tabList = document.querySelector('[role="tablist"]');
+var tabs = tabList.querySelectorAll('[role="tab"]');
+(0,_components_Home__WEBPACK_IMPORTED_MODULE_1__["default"])();
+tabs.forEach(function (tab) {
+  tab.addEventListener("click", changeTab);
 });
-function loadHome() {
-  (0,_components_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"])();
-  (0,_components_Home__WEBPACK_IMPORTED_MODULE_2__["default"])();
-  (0,_components_Footer__WEBPACK_IMPORTED_MODULE_5__["default"])();
+function changeTab(e) {
+  var targetTab = e.target;
+  changeActiveTab(e);
+  if (targetTab.id === "home") {
+    content.innerHTML = "";
+    (0,_components_Home__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  } else if (targetTab.id === "menu") {
+    content.innerHTML = "";
+    (0,_components_Menu__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  } else if (targetTab.id === "contact") {
+    content.innerHTML = "";
+    (0,_components_Contact__WEBPACK_IMPORTED_MODULE_3__["default"])();
+  }
+}
+function changeActiveTab(e) {
+  tabs.forEach(function (tab) {
+    return tab.classList.remove("active");
+  });
+  e.target.classList.add("active");
 }
 })();
 

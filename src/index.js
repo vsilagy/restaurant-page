@@ -1,34 +1,36 @@
 import "./style.css";
-import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import Menu from "./components/Menu";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 
 const content = document.getElementById("content");
-content.classList.add("container");
+const tabList = document.querySelector('[role="tablist"]');
+const tabs = tabList.querySelectorAll('[role="tab"]');
 
-loadHome();
+Home();
 
-document.body.addEventListener("click", (e) => {
-  if (e.target.id === "home") {
-    content.innerHTML = "";
-    loadHome();
-  } else if (e.target.id === "menu") {
-    content.innerHTML = "";
-    NavBar();
-    Menu();
-    Footer();
-  } else if (e.target.id === "contact") {
-    content.innerHTML = "";
-    NavBar();
-    Contact();
-    Footer();
-  }
+tabs.forEach((tab) => {
+  tab.addEventListener("click", changeTab);
 });
 
-function loadHome() {
-  NavBar();
-  Home();
-  Footer();
+function changeTab(e) {
+  const targetTab = e.target;
+
+  changeActiveTab(e);
+
+  if (targetTab.id === "home") {
+    content.innerHTML = "";
+    Home();
+  } else if (targetTab.id === "menu") {
+    content.innerHTML = "";
+    Menu();
+  } else if (targetTab.id === "contact") {
+    content.innerHTML = "";
+    Contact();
+  }
+}
+
+function changeActiveTab(e) {
+  tabs.forEach((tab) => tab.classList.remove("active"));
+  e.target.classList.add("active");
 }

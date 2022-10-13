@@ -33,7 +33,7 @@ body {
   line-height: 1.1;
   padding: 0.75rem;
 }
-.buttons {
+.tab-list {
   display: flex;
   justify-content: space-between;
 }
@@ -59,9 +59,12 @@ body {
   background-color: antiquewhite;
   color: black;
 }
-.link.active {
-  background-color: salmon;
+.active {
+  background-color: navajowhite;
   color: black;
+}
+.content {
+  width: 100%;
 }
 .hero {
   display: flex;
@@ -91,5 +94,15 @@ body {
 .footer {
   margin-top: auto;
   padding: 1rem;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.footer svg {
+  fill: antiquewhite;
+  transition: transform 0.4s ease-in-out;
+}
+.footer svg:hover {
+  transform: rotateY(0.5turn) scale(1.4);
 }
