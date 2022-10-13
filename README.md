@@ -2,11 +2,11 @@
 
 A minimalist restaurant page using javascript
 
-[Live Preview](https://vsilagy.github.io/restaurant-page/)
+[Live Preview](https://restaurant-delish.netlify.app/)
 
 ## Built with:
 
-[![Stack](https://skills.thijs.gg/icons?i=js,css,webpack)](https://github.com/vsilagy)
+[![Stack](https://skills.thijs.gg/icons?i=js,webpack,css)](https://github.com/vsilagy)
 
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Webpack](https://webpack.js.org/)
