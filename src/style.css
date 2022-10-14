@@ -20,6 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  overflow: hidden;
 }
 .nav {
   display: flex;
@@ -80,11 +81,11 @@ body {
   font-weight: 600;
 }
 .hero p {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-style: italic;
 }
 .chef {
-  max-width: 25rem;
+  max-width: 20rem;
   border-radius: 12px;
 }
 .map {

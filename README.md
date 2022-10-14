@@ -1,6 +1,7 @@
 # Restaurant Page
 
-A minimalist restaurant page using javascript
+A minimalist restaurant landing page with 3 tabs
+![restaurant-page](https://i.imgur.com/q9BQPv0.png)
 
 [Live Preview](https://restaurant-delish.netlify.app/)
 
